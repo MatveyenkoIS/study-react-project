@@ -1,0 +1,6 @@
+.cardsList {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 215px);
+    gap: 8px;
+}

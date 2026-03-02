@@ -1,0 +1,25 @@
+.card {
+    box-sizing: border-box;
+
+    padding: 8px;
+
+    text-align: center;
+
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+.price {
+    font-weight: bold;
+    color: goldenrod;
+}
+
+.inStock {
+    font-weight: bold;
+    color: green;
+}
+
+.outOfStock {
+    font-weight: bold;
+    color: red;
+}
