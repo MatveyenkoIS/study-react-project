@@ -1,0 +1,38 @@
+export const products = [
+  {
+    id: 1,
+    title: "Laptop",
+    price: 40000,
+    category: "Office Equipment",
+    rating: 3,
+    isInStock: true,
+    isPremium: false,
+  },
+  {
+    id: 2,
+    title: "CPU",
+    price: 100000,
+    category: "PC Components",
+    rating: 5,
+    isInStock: false,
+    isPremium: true,
+  },
+  {
+    id: 3,
+    title: "GPU",
+    price: 200000,
+    category: "PC Components",
+    rating: 5,
+    isInStock: false,
+    isPremium: true,
+  },
+  {
+    id: 4,
+    title: "Printer",
+    price: 50000,
+    category: "Office Equipment",
+    rating: 4,
+    isInStock: true,
+    isPremium: false,
+  },
+];

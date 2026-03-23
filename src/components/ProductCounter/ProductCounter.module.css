@@ -1,0 +1,10 @@
+.counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 15px;
+}
+
+.countTitle {
+  font-weight: bold;
+}

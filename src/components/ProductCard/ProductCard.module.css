@@ -1,25 +1,40 @@
 .card {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    padding: 8px;
+  padding: 8px;
 
-    text-align: center;
+  text-align: center;
 
-    border: 1px solid gray;
-    border-radius: 8px;
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.category {
+  font-size: 12px;
+  font-style: italic;
+  color: gray;
+}
+.icons {
+  /* empty styles */
 }
 
 .price {
-    font-weight: bold;
-    color: goldenrod;
+  font-weight: bold;
+  color: goldenrod;
 }
 
+.status {
+  font-weight: bold;
+}
 .inStock {
-    font-weight: bold;
-    color: green;
+  color: green;
 }
-
 .outOfStock {
-    font-weight: bold;
-    color: red;
+  color: red;
 }
