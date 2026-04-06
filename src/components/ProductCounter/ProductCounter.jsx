@@ -13,7 +13,7 @@ function ProductCounter({ totalCount, inStockCount }) {
           </span>
         </>
       ) : (
-        `No products in stock`
+        "No products available"
       )}
     </p>
   );

@@ -38,3 +38,22 @@
 .outOfStock {
   color: red;
 }
+
+.button {
+  box-sizing: border-box;
+
+  width: 122px;
+  height: 42px;
+
+  border: 1px solid gray;
+
+  background-color: transparent;
+
+  transition: background-color 0.25s;
+}
+.button:hover {
+  background-color: #eeeeee;
+}
+.button:disabled {
+  background-color: #eeeeee;
+}

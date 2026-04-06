@@ -8,3 +8,27 @@
 main {
   flex-grow: 1;
 }
+
+.productInfoRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.cartButton {
+  border: 1px solid gray;
+  background-color: transparent;
+  fill: black;
+
+  transition: background-color 0.25s;
+}
+
+.cartButton:hover {
+  background-color: #eeeeee;
+}
+
+.searchInput {
+  flex-grow: 1;
+}

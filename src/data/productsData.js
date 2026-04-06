@@ -1,4 +1,4 @@
-export const products = [
+export const productsData = [
   {
     id: 1,
     title: "Laptop",
@@ -7,6 +7,7 @@ export const products = [
     rating: 3,
     isInStock: true,
     isPremium: false,
+    isCarted: false,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const products = [
     rating: 5,
     isInStock: false,
     isPremium: true,
+    isCarted: false,
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const products = [
     rating: 5,
     isInStock: false,
     isPremium: true,
+    isCarted: false,
   },
   {
     id: 4,
@@ -34,5 +37,6 @@ export const products = [
     rating: 4,
     isInStock: true,
     isPremium: false,
+    isCarted: false,
   },
 ];
