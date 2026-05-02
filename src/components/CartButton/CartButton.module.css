@@ -1,0 +1,9 @@
+.cartButton {
+  border: 1px solid gray;
+  background-color: transparent;
+
+  transition: background-color 0.25s;
+}
+.cartButton:hover {
+  background-color: #eeeeee;
+}

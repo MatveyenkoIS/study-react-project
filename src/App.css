@@ -5,30 +5,40 @@
   flex-direction: column;
 }
 
+.header {
+  border-bottom: 1px grey solid;
+  padding: 8px 8px 8px 32px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  column-gap: 32px;
+}
+.logo {
+  margin: 0;
+
+  align-self: center;
+
+  font-size: 51px;
+  font-weight: 700;
+  line-height: normal;
+}
+.bar {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  flex-grow: 1;
+}
+
 main {
   flex-grow: 1;
 }
 
-.productInfoRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
+.footer {
+  border-top: 1px grey solid;
 }
-
-.cartButton {
-  border: 1px solid gray;
-  background-color: transparent;
-  fill: black;
-
-  transition: background-color 0.25s;
-}
-
-.cartButton:hover {
-  background-color: #eeeeee;
-}
-
-.searchInput {
-  flex-grow: 1;
+.note {
+  color: gray;
+  text-align: center;
 }

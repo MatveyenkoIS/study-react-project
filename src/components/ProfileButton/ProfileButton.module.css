@@ -1,0 +1,20 @@
+.profileButton {
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 0.6em 0.7em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: transparent;
+  color: black;
+
+  line-height: normal;
+
+  transition: background-color 0.25s;
+}
+.profileButton:hover {
+  background-color: #eeeeee;
+}
