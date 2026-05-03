@@ -7,3 +7,7 @@
 .cartButton:hover {
   background-color: #eeeeee;
 }
+.cartButton:disabled {
+  fill: #ababab;
+  background-color: #eeeeee;
+}

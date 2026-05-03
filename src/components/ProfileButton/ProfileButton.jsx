@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import styles from "./ProfileButton.module.css";
 
 function ProfileButton() {
   return (
-    <a className={styles.profileButton}>
+    <Link className={styles.profileButton} to="/profile">
       <svg
         className={styles.profileIcon}
         viewBox="0 0 32 32"
@@ -16,7 +17,7 @@ function ProfileButton() {
         </g>
       </svg>
       <span>Profile</span>
-    </a>
+    </Link>
   );
 }
 
