@@ -1,5 +1,5 @@
-import styles from "./ProductList.module.css";
 import ProductCard from "../ProductCard/ProductCard";
+import styles from "./ProductList.module.css";
 
 function ProductList({ products, onProductSelect }) {
   return (

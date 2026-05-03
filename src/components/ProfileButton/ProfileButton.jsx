@@ -1,11 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./ProfileButton.module.css";
 
 function ProfileButton() {
+  const location = useLocation();
+  const isDisabled = location.pathname === "/profile";
+
   return (
-    <Link className={styles.profileButton} to="/profile">
+    <Link
+      className={`${styles.profileButton} ${isDisabled && styles.disabled}`}
+      to="/profile"
+    >
       <svg
-        className={styles.profileIcon}
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
         width={30}

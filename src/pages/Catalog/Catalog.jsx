@@ -4,6 +4,7 @@ import ProductList from "../../components/ProductList/ProductList";
 import Modal from "../../components/Modal/Modal";
 import CartedList from "../../components/CartedList/CartedList";
 import { useState, useMemo } from "react";
+// import styles from "./Catalog.module.css";
 
 function Catalog({ query, isCartVisible, setIsCartVisible }) {
   const [products, setProducts] = useState(productsData);

@@ -8,6 +8,8 @@
   background-color: #eeeeee;
 }
 .cartButton:disabled {
+  pointer-events: none;
+
   fill: #ababab;
   background-color: #eeeeee;
 }

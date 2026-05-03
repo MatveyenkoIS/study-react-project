@@ -18,3 +18,11 @@
 .profileButton:hover {
   background-color: #eeeeee;
 }
+.disabled {
+  pointer-events: none;
+
+  border-color: #213547;
+  background-color: #213547;
+  fill: white;
+  color: white;
+}

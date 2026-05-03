@@ -1,0 +1,23 @@
+.backButton {
+  margin: 8px;
+  border: 1px solid gray;
+  border-radius: 22px;
+  padding: 0.6em 0.75em 0.6em 0.6em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-self: start;
+  align-items: center;
+  column-gap: 6px;
+
+  background-color: transparent;
+  color: black;
+
+  line-height: normal;
+
+  transition: background-color 0.25s;
+}
+.backButton:hover {
+  background-color: #eeeeee;
+}

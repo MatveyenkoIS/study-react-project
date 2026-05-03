@@ -7,7 +7,7 @@
 
 .header {
   border-bottom: 1px grey solid;
-  padding: 8px 8px 8px 32px;
+  padding: 0px 8px 8px 32px;
 
   display: flex;
   flex-direction: row;
@@ -23,6 +23,11 @@
   font-size: 51px;
   font-weight: 700;
   line-height: normal;
+
+  transition: color 0.25s;
+}
+.logo:hover {
+  color: #213547c0;
 }
 .bar {
   display: flex;
