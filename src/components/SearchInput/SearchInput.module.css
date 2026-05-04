@@ -1,9 +1,21 @@
 .searchInput {
   border: 1px grey solid;
   border-radius: 8px;
-  padding: 12px 16px 4px 16px;
+  padding: 12px 16px 4px;
 
   font-size: 51px;
 
   flex-grow: 1;
+}
+.searchInput::-webkit-search-cancel-button {
+  appearance: none;
+
+  width: 16px;
+  height: 16px;
+
+  background-repeat: no-repeat;
+  background-image: url(/icons/cross_icon.svg);
+  background-size: contain;
+
+  cursor: pointer;
 }

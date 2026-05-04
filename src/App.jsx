@@ -23,11 +23,11 @@ function App() {
         </Link>
         <div className="bar">
           <SearchInput onSearch={setSearchQuery} />
-          <CartButton onModal={setModal} />
+          <CartButton isCartOpen={modal} onModal={setModal} />
           <ProfileButton />
         </div>
       </header>
-      <main>
+      <main className="main">
         <Routes>
           <Route
             path="/"

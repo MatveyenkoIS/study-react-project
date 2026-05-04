@@ -1,13 +1,13 @@
 import { useLocation } from "react-router-dom";
 import styles from "./CartButton.module.css";
 
-function CartButton({ onModal }) {
+function CartButton({ isCartOpen, onModal }) {
   const location = useLocation();
   const isDisabled = location.pathname === "/profile";
 
   return (
     <button
-      className={styles.cartButton}
+      className={`${styles.cartButton} ${isCartOpen && styles.open}`}
       onClick={() => onModal(true)}
       disabled={isDisabled}
     >

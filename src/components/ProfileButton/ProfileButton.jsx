@@ -3,11 +3,11 @@ import styles from "./ProfileButton.module.css";
 
 function ProfileButton() {
   const location = useLocation();
-  const isDisabled = location.pathname === "/profile";
+  const isProfileOpen = location.pathname === "/profile";
 
   return (
     <Link
-      className={`${styles.profileButton} ${isDisabled && styles.disabled}`}
+      className={`${styles.profileButton} ${isProfileOpen && styles.open}`}
       to="/profile"
     >
       <svg

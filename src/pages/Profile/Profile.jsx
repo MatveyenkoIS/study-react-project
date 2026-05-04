@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom";
 import styles from "./Profile.module.css";
+import { useState } from "react";
 
 function Profile() {
+  const [form, setForm] = useState({
+    surname: "",
+    name: "",
+    lastname: "",
+    phoneNumber: "",
+    birthDate: "",
+    gender: "",
+  });
+  const [isDisabled, setIsDisabled] = useState(false);
+
   return (
     <>
       <Link className={styles.backButton} to="/">
@@ -15,6 +26,75 @@ function Profile() {
         </svg>
         <span>Return to catalog</span>
       </Link>
+
+      <div className={styles.formContainer}>
+        <h2 className={styles.formHeading}>Online Store ID</h2>
+        <form className={styles.form}>
+          <label className={styles.formElement}>
+            <span>Surname</span>
+            <input
+              className={styles.formInput}
+              type="text"
+              placeholder="Ivanov"
+              disabled={isDisabled}
+            />
+          </label>
+          <label className={styles.formElement}>
+            <span>Name</span>
+            <input
+              className={styles.formInput}
+              type="text"
+              placeholder="Ivan"
+              disabled={isDisabled}
+            />
+          </label>
+          <label className={styles.formElement}>
+            <span>Lastname</span>
+            <input
+              className={styles.formInput}
+              type="text"
+              placeholder="Ivanovich"
+              disabled={isDisabled}
+            />
+          </label>
+          <label className={styles.formElement}>
+            <span>Phone number</span>
+            <input
+              className={styles.formInput}
+              type="tel"
+              placeholder="+7XXXXXXX"
+              disabled={isDisabled}
+            />
+          </label>
+          <label className={styles.formElement}>
+            <span>E-mail address</span>
+            <input
+              className={styles.formInput}
+              type="email"
+              placeholder="example@mail.com"
+              disabled={isDisabled}
+            />
+          </label>
+          <label className={styles.formElement}>
+            <span>Birth date</span>
+            <input
+              className={`${styles.formInput} ${styles.formDatePicker}`}
+              type="date"
+              disabled={isDisabled}
+            />
+          </label>
+          <label className={styles.formElement}>
+            <span>Gender</span>
+            <select className={`${styles.formInput} ${styles.formSelect}`} disabled={isDisabled}>
+              <option label="Select your gender" selected={true} disabled={true}/>
+              <option label="Male"/>
+              <option label="Female"/>
+            </select>
+          </label>
+          <button className={styles.formButton} type="button">Edit</button>
+          <button  className={styles.formButton} type="submit" disabled={isDisabled}>Save Changes</button>
+        </form>
+      </div>
     </>
   );
 }

@@ -42,9 +42,6 @@
 .button {
   box-sizing: border-box;
 
-  width: 122px;
-  height: 42px;
-
   border: 1px solid gray;
 
   background-color: transparent;

@@ -1,7 +1,4 @@
 .cartButton {
-  border: 1px solid gray;
-  background-color: transparent;
-
   transition: background-color 0.25s;
 }
 .cartButton:hover {
@@ -12,4 +9,12 @@
 
   fill: #ababab;
   background-color: #eeeeee;
+}
+.open {
+  pointer-events: none;
+
+  border-color: #213547;
+  background-color: #213547;
+  fill: white;
+  color: white;
 }
