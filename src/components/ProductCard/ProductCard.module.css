@@ -1,12 +1,10 @@
 .card {
   box-sizing: border-box;
-
+  border: 1px solid gray;
+  border-radius: 8px;
   padding: 8px;
 
   text-align: center;
-
-  border: 1px solid gray;
-  border-radius: 8px;
 }
 
 .cardHeader {
@@ -41,16 +39,6 @@
 
 .button {
   box-sizing: border-box;
-
+  min-width: 122px;
   border: 1px solid gray;
-
-  background-color: transparent;
-
-  transition: background-color 0.25s;
-}
-.button:hover {
-  background-color: #eeeeee;
-}
-.button:disabled {
-  background-color: #eeeeee;
 }

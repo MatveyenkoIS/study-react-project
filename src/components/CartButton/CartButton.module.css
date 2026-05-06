@@ -1,14 +1,8 @@
 .cartButton {
-  transition: background-color 0.25s;
-}
-.cartButton:hover {
-  background-color: #eeeeee;
+  /* empty styles */
 }
 .cartButton:disabled {
-  pointer-events: none;
-
   fill: #ababab;
-  background-color: #eeeeee;
 }
 .open {
   pointer-events: none;

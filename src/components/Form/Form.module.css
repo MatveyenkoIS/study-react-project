@@ -1,0 +1,54 @@
+.formContainer {
+  margin: 0 8px 8px;
+  border: 1px grey solid;
+  border-radius: 22px;
+  padding: 22px;
+}
+.formHeading {
+  margin: 0 0 22px 0;
+
+  font-size: 48px;
+  line-height: normal;
+  text-align: center;
+}
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.formElement {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+.formInput {
+  padding: 16px;
+
+  font-size: inherit;
+  line-height: 1.2;
+}
+.formDatePicker {
+  cursor: text;
+}
+.formDatePicker::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+.formSelect {
+  appearance: none;
+
+  padding: 16.17px 16px;
+
+  background-repeat: no-repeat;
+  background-image: url(/icons/down-arrow_icon.svg);
+  background-position: right 10px top 14px;
+
+  cursor: pointer;
+}
+.formSelect:open {
+  background-image: url(/icons/up-arrow_icon.svg);
+}
+.formButton {
+  padding: 16px;
+  align-self: end;
+  line-height: 1.2;
+}
