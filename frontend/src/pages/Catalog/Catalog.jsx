@@ -1,14 +1,25 @@
-import { productsData } from "../../data/productsData";
 import ProductCounter from "../../components/ProductCounter/ProductCounter";
 import ProductList from "../../components/ProductList/ProductList";
 import Modal from "../../components/Modal/Modal";
 import CartedList from "../../components/CartedList/CartedList";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import axios from "axios";
 // import styles from "./Catalog.module.css";
 
 function Catalog({ query, isCartVisible, setIsCartVisible }) {
-  const [products, setProducts] = useState(productsData);
-  const [cartedProducts, setCartedProducts] = useState([]);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/productsList`)
+      .then((response) => {
+        console.log("Successful request!");
+        setProducts(response.data);
+      })
+      .catch((error) => {
+        console.error("Request error: ", error);
+      });
+  }, []);
 
   const inStockCounter = (products) => {
     let count = 0;
@@ -28,24 +39,20 @@ function Catalog({ query, isCartVisible, setIsCartVisible }) {
     );
   }, [query, products]);
 
-  const handleProductSelect = (id, title, price, rating, isPremium) => {
-    setCartedProducts([
-      ...cartedProducts,
-      {
-        id: id,
-        title: title,
-        price: price,
-        rating: rating,
-        isPremium: isPremium,
-      },
-    ]);
-    setProducts(
-      products.map((product) =>
-        product.id === id
-          ? { ...product, isCarted: !product.isCarted }
-          : product,
-      ),
-    );
+  const handleProductSelect = (id, title) => {
+    axios
+      .patch(`http://localhost:3000/productsList/${id}`, {
+        isCarted: true,
+      })
+      .then((response) => {
+        console.log("Successful product update!");
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error("Update error", error);
+      });
+
+    location.reload();
     alert(`${title} has been added to your cart.`);
   };
 
@@ -54,16 +61,19 @@ function Catalog({ query, isCartVisible, setIsCartVisible }) {
   };
 
   const handleRemove = (id) => {
-    setCartedProducts(
-      cartedProducts.filter((cartedProduct) => cartedProduct.id !== id),
-    );
-    setProducts(
-      products.map((product) =>
-        product.id === id
-          ? { ...product, isCarted: !product.isCarted }
-          : product,
-      ),
-    );
+    axios
+      .patch(`http://localhost:3000/productsList/${id}`, {
+        isCarted: false,
+      })
+      .then((response) => {
+        console.log("Successful carted product removal!");
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error("Update error", error);
+      });
+
+    location.reload();
   };
 
   return (
@@ -79,7 +89,7 @@ function Catalog({ query, isCartVisible, setIsCartVisible }) {
       />
       <Modal isVisible={isCartVisible} setIsVisible={setIsCartVisible}>
         <CartedList
-          cartedProducts={cartedProducts}
+          cartedProducts={products.filter((product) => product.isCarted)}
           onCartedProductOrder={handleOrder}
           onRemoveFromCart={handleRemove}
         />
